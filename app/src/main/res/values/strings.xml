@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Attendance Manager</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="home">Home</string>
+    <string name="attendance">Attendance Manager</string>
+    <string name="timetable">TimeTable Manager </string>
+    <string name="expense">Expense Manager</string>
+    <string name="SubjectListID">SUBJECTLIST</string>
+</resources>

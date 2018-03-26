@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/dialogue_title"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Add Subject"
+        android:gravity="center"
+        android:textSize="30dp"
+        android:textStyle="bold|italic"
+        android:textAllCaps="true"/>
+        <EditText
+            android:id="@+id/text_input_SubjectName"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            style="@style/Attendance_Dialogue_InputFields"
+            android:layout_below="@id/dialogue_title"
+            android:drawableLeft="@drawable/ic_create_black_24dp"
+            android:hint="Subject Name"
+            />
+        <EditText
+            android:id="@+id/text_input_MinAttendance"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            style="@style/Attendance_Dialogue_InputFields"
+            android:layout_below="@id/text_input_SubjectName"
+            android:drawableLeft="@drawable/ic_warning_black_24dp"
+            android:hint="Minimum Attendance %"
+            android:maxLength="2"
+            android:inputType="number"
+            />
+        <EditText
+            android:id="@+id/text_input_LecturesAttended"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/text_input_MinAttendance"
+            style="@style/Attendance_Dialogue_InputFields"
+            android:drawableLeft="@drawable/ic_check_black_24dp"
+            android:hint="Lectures Attended"
+            android:inputType="number"
+            android:maxLength="4"
+            />
+        <EditText
+            android:id="@+id/text_input_LecturesBunked"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/text_input_LecturesAttended"
+            style="@style/Attendance_Dialogue_InputFields"
+            android:drawableLeft="@drawable/ic_cancel_black_24dp"
+            android:hint="Lectures Bunked"
+            android:inputType="number"
+            android:maxLength="4"
+            />
+    <Button
+        android:id="@+id/btn_AddSubject_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/rounded_rect"
+        android:layout_below="@id/text_input_LecturesBunked"
+        android:layout_margin="30dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:text="Add Subject"
+        android:textColor="@color/White"
+        android:textStyle="bold"/>
+</RelativeLayout>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fragment_attendance_layout">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/app_name"
+            android:textColor="@color/White"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:gravity="center"/>
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/layout_nosubjectadded"
+        android:layout_below="@id/toolbar"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone">
+        <TextView
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:text="Add Subject to get started."
+            android:textSize="20sp"/>
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:id="@+id/addsubject_emptylist"
+            android:layout_marginLeft="50dp"
+            android:background="@color/colorPrimary"
+            android:text="Add Subject"
+            android:textColor="@color/White"
+            />
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/layout_subjectadded"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar">
+    <Button
+        android:id="@+id/addsubject_filledlist"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/rounded_rect"
+        android:backgroundTint="@color/colorPrimary"
+        android:text="Add Subject"
+        android:textColor="@color/White"/>
+        <RelativeLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/totalAttendance"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Total Attendance 90%"
+                android:background="@drawable/rounded_rect"
+                android:backgroundTint="@color/DarkPurple"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:textColor="@color/White"
+                android:textStyle="bold|italic"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_below="@id/totalAttendance"
+                android:gravity="center"
+                android:text="Swipe Right to Remove"
+                android:textStyle="italic"
+                />
+        </RelativeLayout>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/addsubject_filledlist"
+        android:layout_below="@id/header">
+    </android.support.v7.widget.RecyclerView>
+    </RelativeLayout>
+</RelativeLayout>
